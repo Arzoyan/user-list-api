@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companys",
+  "info": {
+    "singularName": "company",
+    "pluralName": "companys",
+    "displayName": "companys",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "companyReviews": {
+      "type": "json"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "private": true,
+      "inversedBy": "company_id"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+POST http://localhost:1337/api/auth/local/register
+Content-Type: application/json
+
+{
+   "email":"bulki@bulk.com",
+   "password":"bulki123",
+   "firstName":"bulki",
+   "lastName":"mulki",
+   "username":"0002"
+}
+
+### 
+
+POST http://localhost:1337/api/companys
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzEwNTA3OTY2LCJleHAiOjE3MTMwOTk5NjZ9.OR538S_Kmd8ffrGWj1QgTRW_ENyxr8OVIVHfD-dBmMY
+
+###
+
+GET http://localhost:1337/api/users/6?populate=company_id
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzEwNTMyMzMwLCJleHAiOjE3MTMxMjQzMzB9.dG1DSF7SoqeDqAEcfcBk10hxWulkIEE6mrXxA6nLrIs
+
+
+###
+
+GET http://localhost:1337/api/companys?populate=user_id
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzEwNTMyMzMwLCJleHAiOjE3MTMxMjQzMzB9.dG1DSF7SoqeDqAEcfcBk10hxWulkIEE6mrXxA6nLrIs
